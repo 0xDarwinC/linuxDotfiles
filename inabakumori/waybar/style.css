@@ -1,0 +1,61 @@
+/* =============================================================================
+ * Waybar CSS Style
+ * Monochrome Light Theme (Inabakumori Inspired)
+ * ========================================================================== */
+
+/* --- Universal Settings --- */
+/* This applies to the whole bar */
+* {
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* --- Main Bar --- */
+/* This is the main bar itself */
+#window {
+    background-color: #acacac; /* Light gray background */
+    color: #000000;            /* Black text */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* --- Modules --- */
+/* This styles every module */
+#workspaces,
+#clock,
+#tray,
+#cpu,
+#memory,
+#pulseaudio,
+#network {
+    padding: 0 10px;
+    margin: 0 4px;
+}
+
+/* --- Workspaces Module --- */
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #000000;
+}
+
+/* Style for the active/focused workspace button */
+#workspaces button.focused {
+    background-color: #9a9a9a; /* A slightly darker gray for selection */
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+/* Style for urgent workspaces (e.g., a notification) */
+#workspaces button.urgent {
+    background-color: #000000;
+    color: #acacac;
+}
+
+/* --- Clock Module --- */
+#clock {
+    font-weight: bold;
+}
